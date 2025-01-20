@@ -1,0 +1,37 @@
+import subprocess
+import sys
+import logging
+from load_csv_to_mysql_for_companies import Companies_csv_to_DB
+from load_csv_to_mysql_for_opportunities import Opportunities_csv_to_DB
+from load_json_to_mysql_for_activities import Activies_json_to_DB
+from load_json_to_mysql_for_contacts import Contacts_json_to_DB
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+
+def main():
+    
+    Functions = [Companies_csv_to_DB,Contacts_json_to_DB,Opportunities_csv_to_DB,Activies_json_to_DB,]
+    
+    for func in Functions:
+        try:
+            script_name = func.__name__  # Get the function name dynamically
+            logging.info(f"Starting ETL script: {script_name}")
+            
+            # Call the function
+            func()
+
+            logging.info(f"ETL script {script_name} completed successfully.")
+        
+        except subprocess.CalledProcessError as e:
+            logging.error(f"ETL script {script_name} failed with error: {e}")
+            logging.error(f"stderr: {e.stderr}")
+            logging.error(f"stdout: {e.stdout}")
+            sys.exit(1)
+
+if __name__ == "__main__":
+    main()

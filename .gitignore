@@ -1,0 +1,35 @@
+# Python-specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.log
+
+# Virtual environment
+venv/
+env/
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# Logs and coverage reports
+*.log
+coverage/
+*.cover
+.hypothesis/
+.tox/
+
