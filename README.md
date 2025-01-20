@@ -122,11 +122,11 @@ Each source file is loaded into its corresponding staging table with the suffix 
 
 ## Entity Relationship Diagram (ERD)
 
-![Source ERD](/assets/ERD-Diagram/ERD Diagram_page-0001.jpg)
+![Source ERD](https://github.com/aliishfaq/alysio-data-engineer-challenge/blob/main/assets/ERD-Diagram/ERD%20Diagram_page-0001.jpg)
 
 ## Process Flow
 
-![Dataflow Diagram](assets/Data-Flow-Diagram/Data Flow Diagram_page-0001.jpg)
+![Dataflow Diagram](https://github.com/aliishfaq/alysio-data-engineer-challenge/blob/main/assets/Data-Flow-Diagram/Data%20Flow%20Diagram_page-0001.jpg)
 
 1. **Initialization**
     - Set up database connection.
@@ -196,10 +196,7 @@ Ensure the following are installed on your system:
 
 5. **MySQL Database Setup:**
    - Start the MySQL server.
-   - Open MySQL Workbench or command line and run:
-   ```sql
-   CREATE DATABASE yourdatabase;
-   ```
+   - Open MySQL Workbench or command line and run `init.sql`.
    - Create necessary tables using the provided schema.
 
 6. **Run the ETL Pipeline:**
